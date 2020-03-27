@@ -1,0 +1,35 @@
+<MyGrid>:
+    rec: rec
+    new: new 
+	GridLayout:
+		cols:1
+		size: root.width, root.height
+	    #padding: 10
+		#spacing: 10
+
+		GridLayout:
+			cols:2
+		
+			Label:
+				text: "Received Temperature: "
+
+			TextInput:
+				id:rec
+				multiline:False
+
+			Label:
+				text: "New Temperature: "
+
+			TextInput:
+				id:new
+				multiline:False
+
+        Button:
+            text: "Connect"
+            on_press:root.btn_con()
+		Button:
+			text:"Set Temperature"
+			on_press:root.btn_set()
+        Button: 
+            text: "Disconnect"
+            on_press: root.btn_dis()
